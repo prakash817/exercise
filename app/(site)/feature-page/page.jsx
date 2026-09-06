@@ -1,9 +1,5 @@
-"use client";
-
-import { useEffect } from "react";
 import Link from "next/link";
-import { featurePage } from "@/config/siteConfig";
-import { getPolicyHref } from "@/helpers/policyPages";
+import { getFeatureLandings } from "@/lib/landing";
 
 function formatFeatureName(name) {
   return name
@@ -13,9 +9,7 @@ function formatFeatureName(name) {
 }
 
 export default function FeaturePage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const listings = getFeatureLandings();
 
   return (
     <main className="calculator-page feature-page">
@@ -33,16 +27,16 @@ export default function FeaturePage() {
         </div>
 
         <ul className="feature-page__list">
-          {featurePage.map((item) => (
-            <li key={item.featurePageName}>
-              <Link href={getPolicyHref(item)} className="feature-page__link">
+          {listings.map((item) => (
+            <li key={`${item.policyId}-${item.userId}`}>
+              <a href={item.href} className="feature-page__link">
                 <span className="feature-page__name">
-                  {formatFeatureName(item.featurePageName)}
+                  {formatFeatureName(item.versionLabel)}
                 </span>
                 <span className="feature-page__open" aria-hidden="true">
                   Open →
                 </span>
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

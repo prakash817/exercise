@@ -1,13 +1,15 @@
+"use client";
+
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
-import SipGrowthChart from "../components/SipGrowthChart";
-import { siteConfig } from "../config/siteConfig";
+import Link from "next/link";
+import SipGrowthChart from "@/components/SipGrowthChart";
+import { siteConfig } from "@/config/siteConfig";
 import {
   SIP_YEAR_OPTIONS,
   calculateSipProjection,
   formatIndianCurrency,
-} from "../utils/sipCalculator";
-import { whatsAppLink } from "../utils/links";
+} from "@/utils/sipCalculator";
+import { whatsAppLink } from "@/utils/links";
 
 const DEFAULT_MONTHLY = 5000;
 const DEFAULT_YEARS = 10;
@@ -44,7 +46,7 @@ export default function SipCalculatorPage() {
             Estimate how your monthly investments can grow over time with the
             power of compounding.
           </p>
-          <Link to="/calculator" className="calculator-page__back">
+          <Link href="/calculator" className="calculator-page__back">
             ← All Calculators
           </Link>
         </div>

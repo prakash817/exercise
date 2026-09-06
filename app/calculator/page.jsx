@@ -1,6 +1,8 @@
+"use client";
+
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { calculatorCards } from "../data/calculators";
+import Link from "next/link";
+import { calculatorCards } from "@/data/calculators";
 
 export default function CalculatorPage() {
   useEffect(() => {
@@ -17,7 +19,7 @@ export default function CalculatorPage() {
             Choose a calculator below to estimate SIP growth, plan retirement
             corpus, and make informed financial decisions.
           </p>
-          <Link to="/" className="calculator-page__back">
+          <Link href="/" className="calculator-page__back">
             ← Back to Home
           </Link>
         </div>
@@ -26,7 +28,7 @@ export default function CalculatorPage() {
           {calculatorCards.map((calculator) => (
             <Link
               key={calculator.id}
-              to={calculator.path}
+              href={calculator.path}
               className="calculator-hub__card"
             >
               <span className="calculator-hub__icon" aria-hidden="true">

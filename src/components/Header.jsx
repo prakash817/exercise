@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { navLinks } from "../data/content";
 import { siteConfig } from "../config/siteConfig";

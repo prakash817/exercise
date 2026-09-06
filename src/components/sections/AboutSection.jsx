@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getAdvisorIntro } from "../../config/siteConfig";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const LANGUAGES = ["hi", "en"];
 
@@ -24,7 +24,7 @@ function AdvisorIntroPanel({ language, isVisible }) {
       <ol className="advisor-intro__planning-list">
         {intro.planningItems.map((item, index) => (
           <li key={item.url} style={{ '--planning-delay': `${index * 0.15}s` }}>
-            <Link to={item.url} className="planning-link">
+            <Link href={item.url} className="planning-link">
               <span className="planning-link__name">{item.name}</span>
               <span className="planning-link__cta">
                 <span className="planning-link__cta-text">

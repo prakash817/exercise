@@ -1,6 +1,9 @@
+"use client";
+
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { featurePage } from "../config/siteConfig";
+import Link from "next/link";
+import { featurePage } from "@/config/siteConfig";
+import { getPolicyHref } from "@/helpers/policyPages";
 
 function formatFeatureName(name) {
   return name
@@ -21,10 +24,10 @@ export default function FeaturePage() {
           <div className="kicker">Feature Pages</div>
           <h2>Explore our policy feature pages</h2>
           <p>
-            Select a feature page below to open it in a new tab and learn more
+            Select a feature page below to open its policy version and learn more
             about our insurance and investment offerings.
           </p>
-          <Link to="/" className="calculator-page__back">
+          <Link href="/" className="calculator-page__back">
             ← Back to Home
           </Link>
         </div>
@@ -32,19 +35,14 @@ export default function FeaturePage() {
         <ul className="feature-page__list">
           {featurePage.map((item) => (
             <li key={item.featurePageName}>
-              <a
-                href={item.featurePageUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="feature-page__link"
-              >
+              <Link href={getPolicyHref(item)} className="feature-page__link">
                 <span className="feature-page__name">
                   {formatFeatureName(item.featurePageName)}
                 </span>
                 <span className="feature-page__open" aria-hidden="true">
-                  Open ↗
+                  Open →
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

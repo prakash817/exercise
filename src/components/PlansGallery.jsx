@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { getAllPlans } from "../helpers/helper";
-import PlanCard from "../components/PlanCard";
-import PlanModal from "../components/PlanModal";
+"use client";
 
-export default function PlansPage() {
-  const [searchParams] = useSearchParams();
-  const planType = searchParams.get("plan_type");
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { getAllPlans } from "@/helpers/helper";
+import PlanCard from "@/components/PlanCard";
+import PlanModal from "@/components/PlanModal";
+
+export default function PlansGallery({ planType }) {
   const allPlans = getAllPlans(planType);
   const [selectedPlan, setSelectedPlan] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [planType]);
 
   return (
     <main className="plans-page">
@@ -30,12 +30,10 @@ export default function PlansPage() {
             Browse every plan in one place. Select a plan to open full details,
             benefits, and contact options.
           </p>
-          <Link to="/" className="plans-page__back">
+          <Link href="/" className="plans-page__back">
             ← Back to Home
           </Link>
-          <p className="plans-page__count">
-            Total Plans: {allPlans.length}
-          </p>
+          <p className="plans-page__count">Total Plans: {allPlans.length}</p>
         </div>
 
         <div className="plans-grid">

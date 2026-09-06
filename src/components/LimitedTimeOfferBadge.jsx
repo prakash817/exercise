@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from 'react'
 import { siteConfig } from '../config/siteConfig'
 
@@ -5,6 +7,10 @@ const OFFER_DURATION_MS = siteConfig.offerDurationMs
 const STORAGE_KEY = 'shubh_insurance_limited_offer_end'
 
 function getOfferEndTime() {
+  if (typeof window === "undefined") {
+    return Date.now() + OFFER_DURATION_MS
+  }
+
   const stored = window.localStorage.getItem(STORAGE_KEY)
   if (stored) {
     const end = Number(stored)
@@ -26,10 +32,16 @@ function formatCountdown(ms) {
 }
 
 export default function LimitedTimeOfferBadge({ className = '' }) {
-  const [endTime] = useState(getOfferEndTime)
-  const [timeLeft, setTimeLeft] = useState(() => formatCountdown(endTime - Date.now()))
+  const [endTime, setEndTime] = useState(null)
+  const [timeLeft, setTimeLeft] = useState(() => formatCountdown(OFFER_DURATION_MS))
 
   useEffect(() => {
+    setEndTime(getOfferEndTime())
+  }, [])
+
+  useEffect(() => {
+    if (!endTime) return
+
     const tick = () => setTimeLeft(formatCountdown(endTime - Date.now()))
     tick()
 

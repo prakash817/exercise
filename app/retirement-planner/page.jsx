@@ -1,15 +1,17 @@
+"use client";
+
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
-import RetirementAccumulationChart from "../components/RetirementAccumulationChart";
-import { siteConfig } from "../config/siteConfig";
-import { formatIndianCurrency } from "../utils/sipCalculator";
+import Link from "next/link";
+import RetirementAccumulationChart from "@/components/RetirementAccumulationChart";
+import { siteConfig } from "@/config/siteConfig";
+import { formatIndianCurrency } from "@/utils/sipCalculator";
 import {
   INCOME_PATTERNS,
   RISK_PROFILES,
   calculateRetirementPlan,
   createAgeOptions,
-} from "../utils/retirementCalculator";
-import { whatsAppLink } from "../utils/links";
+} from "@/utils/retirementCalculator";
+import { whatsAppLink } from "@/utils/links";
 
 const PRESENT_AGE_OPTIONS = createAgeOptions(25, 55);
 const RETIREMENT_AGE_OPTIONS = createAgeOptions(50, 70);
@@ -22,7 +24,8 @@ export default function RetirementPlannerPage() {
   const [presentMonthlyNeeds, setPresentMonthlyNeeds] = useState(50000);
   const [inflationPercent, setInflationPercent] = useState(6);
   const [riskAppetite, setRiskAppetite] = useState("moderate");
-  const [retirementRiskAppetite, setRetirementRiskAppetite] = useState("moderate");
+  const [retirementRiskAppetite, setRetirementRiskAppetite] =
+    useState("moderate");
   const [incomePattern, setIncomePattern] = useState("growing");
 
   useEffect(() => {
@@ -62,10 +65,10 @@ export default function RetirementPlannerPage() {
           <div className="kicker">Retirement Planner</div>
           <h2>Plan your retirement corpus with confidence</h2>
           <p>
-            Estimate the corpus required at retirement and the monthly SIP needed
-            to reach your goal, based on inflation and risk profile.
+            Estimate the corpus required at retirement and the monthly SIP
+            needed to reach your goal, based on inflation and risk profile.
           </p>
-          <Link to="/calculator" className="calculator-page__back">
+          <Link href="/calculator" className="calculator-page__back">
             ← All Calculators
           </Link>
         </div>
@@ -93,13 +96,17 @@ export default function RetirementPlannerPage() {
                 <span>Retirement Age</span>
                 <select
                   value={retirementAge}
-                  onChange={(event) => setRetirementAge(Number(event.target.value))}
+                  onChange={(event) =>
+                    setRetirementAge(Number(event.target.value))
+                  }
                 >
-                  {RETIREMENT_AGE_OPTIONS.filter((age) => age > presentAge).map((age) => (
-                    <option key={age} value={age}>
-                      {age} Years
-                    </option>
-                  ))}
+                  {RETIREMENT_AGE_OPTIONS.filter((age) => age > presentAge).map(
+                    (age) => (
+                      <option key={age} value={age}>
+                        {age} Years
+                      </option>
+                    ),
+                  )}
                 </select>
               </label>
 
@@ -107,13 +114,17 @@ export default function RetirementPlannerPage() {
                 <span>Income Needed Till</span>
                 <select
                   value={incomeNeededTill}
-                  onChange={(event) => setIncomeNeededTill(Number(event.target.value))}
+                  onChange={(event) =>
+                    setIncomeNeededTill(Number(event.target.value))
+                  }
                 >
-                  {INCOME_TILL_OPTIONS.filter((age) => age > retirementAge).map((age) => (
-                    <option key={age} value={age}>
-                      {age} Years
-                    </option>
-                  ))}
+                  {INCOME_TILL_OPTIONS.filter((age) => age > retirementAge).map(
+                    (age) => (
+                      <option key={age} value={age}>
+                        {age} Years
+                      </option>
+                    ),
+                  )}
                 </select>
               </label>
 
@@ -204,7 +215,9 @@ export default function RetirementPlannerPage() {
               </article>
               <article className="sip-value-card">
                 <span>Monthly Needs at Retirement</span>
-                <strong>₹ {formatIndianCurrency(plan.monthlyNeedsAtRetirement)}</strong>
+                <strong>
+                  ₹ {formatIndianCurrency(plan.monthlyNeedsAtRetirement)}
+                </strong>
               </article>
               <article className="sip-value-card sip-value-card--highlight">
                 <span>Total Corpus Required</span>
@@ -228,7 +241,9 @@ export default function RetirementPlannerPage() {
               selected pre-retirement risk profile ({plan.preRetirementReturn}%
               p.a.).
             </p>
-            <RetirementAccumulationChart yearlyProjection={plan.yearlyProjection} />
+            <RetirementAccumulationChart
+              yearlyProjection={plan.yearlyProjection}
+            />
           </section>
         </div>
 
@@ -259,8 +274,8 @@ export default function RetirementPlannerPage() {
             Assumptions: pre-retirement returns of{" "}
             {RISK_PROFILES.conservative.preRetirementReturn}% (Conservative),{" "}
             {RISK_PROFILES.moderate.preRetirementReturn}% (Moderate),{" "}
-            {RISK_PROFILES.aggressive.preRetirementReturn}% (Aggressive). Post-retirement
-            returns used for corpus calculation are{" "}
+            {RISK_PROFILES.aggressive.preRetirementReturn}% (Aggressive).
+            Post-retirement returns used for corpus calculation are{" "}
             {RISK_PROFILES.conservative.postRetirementReturn}%,{" "}
             {RISK_PROFILES.moderate.postRetirementReturn}%, and{" "}
             {RISK_PROFILES.aggressive.postRetirementReturn}% respectively.
@@ -277,8 +292,9 @@ export default function RetirementPlannerPage() {
 
           <p className="sip-disclaimer">
             <b>Disclaimer:</b> This retirement planner is for illustrative
-            purposes only. Actual returns, inflation, and corpus requirements may
-            differ. Please consult your advisor before making investment decisions.
+            purposes only. Actual returns, inflation, and corpus requirements
+            may differ. Please consult your advisor before making investment
+            decisions.
           </p>
         </section>
       </div>

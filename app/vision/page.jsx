@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect } from "react";
-import VisionSection from "../components/sections/VisionSection";
+import VisionSection from "@/components/sections/VisionSection";
 
 export default function VisionPage() {
   useEffect(() => {

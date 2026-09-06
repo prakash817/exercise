@@ -1,7 +1,9 @@
+"use client";
+
 import { useState } from "react";
 import PlanModal from "../PlanModal";
 import { PlanCardContainer } from "../PlanCardContainer";
-import { getFeaturedPlans } from "../../helpers/helper";
+import { usePlans } from "@/hooks/usePlans";
 
 const PlansSectionHead = ({ category }) => {
   return (
@@ -18,7 +20,7 @@ const PlansSectionHead = ({ category }) => {
 
 export default function PlansSection({ planType, category }) {
   const [selectedPlan, setSelectedPlan] = useState(null);
-  const plans = getFeaturedPlans({ plan_type: planType });
+  const { plans } = usePlans({ featured: planType });
 
   return (
     <section id="plans" className="plans-section">

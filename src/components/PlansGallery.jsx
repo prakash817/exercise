@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { getAllPlans } from "@/helpers/helper";
+import { usePlans } from "@/hooks/usePlans";
 import PlanCard from "@/components/PlanCard";
 import PlanModal from "@/components/PlanModal";
 
 export default function PlansGallery({ planType }) {
-  const allPlans = getAllPlans(planType);
+  const { plans } = usePlans({ planType: planType || undefined });
   const [selectedPlan, setSelectedPlan] = useState(null);
 
   useEffect(() => {
@@ -33,11 +33,11 @@ export default function PlansGallery({ planType }) {
           <Link href="/" className="plans-page__back">
             ← Back to Home
           </Link>
-          <p className="plans-page__count">Total Plans: {allPlans.length}</p>
+          <p className="plans-page__count">Total Plans: {plans.length}</p>
         </div>
 
         <div className="plans-grid">
-          {allPlans.map((plan) => (
+          {plans.map((plan) => (
             <PlanCard key={plan.id} plan={plan} onSelect={setSelectedPlan} />
           ))}
         </div>

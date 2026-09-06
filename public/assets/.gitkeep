@@ -1,0 +1,9 @@
+# Keeps this folder in git.
+#
+# Add static public files here. They are served at:
+#   /assets/<filename>
+#
+# Use this folder for images or media linked from HTML or content
+# with paths like "/assets/photo.jpg".
+#
+# Bundled React assets (imported in components) belong in src/assets/.

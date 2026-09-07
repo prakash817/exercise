@@ -1,29 +1,29 @@
 "use client";
 
+import { useState } from "react";
 import { genderOptions } from "../data/content";
 import WhatsAppIcon from "./WhatsAppIcon";
 import { usePlans } from "@/hooks/usePlans";
 
 export const EnquireForm = ({ formResult, handleSubmit }) => {
   const { plans } = usePlans();
+  const [hasContactTime, setHasContactTime] = useState(false);
+
   return (
     <form onSubmit={handleSubmit}>
-      <input name="name" required placeholder="Full Name *" />
+      <input name="name" required placeholder="Full Name" />
       <input
         name="mobile"
         required
         inputMode="tel"
-        placeholder="Mobile Number *"
+        placeholder="Mobile Number"
       />
       <select name="gender" defaultValue={genderOptions[0].id}>
         {genderOptions.map((gender) => (
           <option key={gender.id}>{gender.gender}</option>
         ))}
       </select>
-      {/* <input name="district" placeholder="District" /> */}
       <input name="location" placeholder="City / Village" />
-      {/* <input name="age" type="number" min="1" max="100" placeholder="Age" /> */}
-      {/* <input name="qualification" placeholder="Qualification" /> */}
 
       <select
         name="plan_name"
@@ -34,11 +34,18 @@ export const EnquireForm = ({ formResult, handleSubmit }) => {
           <option key={plan.id}>{plan.plan_name}</option>
         ))}
       </select>
-      <input
-        name="preferred_contact_time"
-        placeholder="Preferred contact time"
-        type="datetime-local"
-      />
+      <label
+        className={`datetime-field${hasContactTime ? " has-value" : ""}`}
+      >
+        <span className="datetime-field__placeholder">
+          Preferred contact time
+        </span>
+        <input
+          name="preferred_contact_time"
+          type="datetime-local"
+          onChange={(event) => setHasContactTime(Boolean(event.target.value))}
+        />
+      </label>
       <textarea
         className="full"
         name="message"

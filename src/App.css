@@ -2150,6 +2150,54 @@ textarea {
   color: var(--ink);
 }
 
+select,
+.datetime-field,
+.datetime-field input[type="datetime-local"] {
+  cursor: pointer;
+}
+
+.datetime-field input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+.datetime-field {
+  position: relative;
+  display: block;
+}
+
+.datetime-field input[type="datetime-local"] {
+  color: transparent;
+}
+
+.datetime-field.has-value input[type="datetime-local"],
+.datetime-field:focus-within input[type="datetime-local"] {
+  color: var(--ink);
+}
+
+.datetime-field input[type="datetime-local"]::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.datetime-field.has-value input[type="datetime-local"]::-webkit-datetime-edit,
+.datetime-field:focus-within input[type="datetime-local"]::-webkit-datetime-edit {
+  color: var(--ink);
+}
+
+.datetime-field__placeholder {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #8a9aa8;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.datetime-field.has-value .datetime-field__placeholder,
+.datetime-field:focus-within .datetime-field__placeholder {
+  display: none;
+}
+
 textarea {
   min-height: 110px;
   resize: vertical;

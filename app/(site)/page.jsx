@@ -21,7 +21,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <AboutSection />
-        <PlansSection planType="core" category="Popular LIC Core Plans" />
+        {/* <PlansSection planType="core" category="Popular LIC Core Plans" /> */}
         <PlansSection
           planType="conceptual"
           category="Popular LIC Conceptual Plans"

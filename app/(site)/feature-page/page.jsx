@@ -29,7 +29,12 @@ export default function FeaturePage() {
         <ul className="feature-page__list">
           {listings.map((item) => (
             <li key={`${item.policyId}-${item.userId}`}>
-              <a href={item.href} className="feature-page__link">
+              <a
+                href={item.href}
+                className="feature-page__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="feature-page__name">
                   {formatFeatureName(item.versionLabel)}
                 </span>

@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { usePlans } from "@/hooks/usePlans";
+import BackButton from "@/components/common/BackButton";
 import PlanCard from "@/components/PlanCard";
 import PlanModal from "@/components/PlanModal";
 
@@ -30,9 +30,7 @@ export default function PlansGallery({ planType }) {
             Browse every plan in one place. Select a plan to open full details,
             benefits, and contact options.
           </p>
-          <Link href="/" className="plans-page__back">
-            ← Back to Home
-          </Link>
+          <BackButton />
           <p className="plans-page__count">Total Plans: {plans.length}</p>
         </div>
 

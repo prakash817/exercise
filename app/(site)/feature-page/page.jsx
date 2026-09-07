@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { getFeatureLandings } from "@/lib/landing";
+import BackButton from "@/components/common/BackButton";
 
 function formatFeatureName(name) {
   return name
@@ -21,9 +21,7 @@ export default function FeaturePage() {
             Select a feature page below to open its policy version and learn more
             about our insurance and investment offerings.
           </p>
-          <Link href="/" className="calculator-page__back">
-            ← Back to Home
-          </Link>
+          <BackButton />
         </div>
 
         <ul className="feature-page__list">

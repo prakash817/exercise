@@ -1209,14 +1209,6 @@ section {
   background: linear-gradient(180deg, #f7fcff 0%, #fff 100%);
 }
 
-.plans-page__back {
-  display: inline-block;
-  margin-top: 12px;
-  color: var(--blue);
-  font-size: 14px;
-  font-weight: 700;
-}
-
 .plans-page__count {
   margin: 8px 0 0;
   color: var(--muted);
@@ -1456,14 +1448,6 @@ section {
 .calculator-page {
   padding: 48px 0 76px;
   background: linear-gradient(180deg, #f7fcff 0%, #fff 100%);
-}
-
-.calculator-page__back {
-  display: inline-block;
-  margin-top: 12px;
-  color: var(--blue);
-  font-size: 14px;
-  font-weight: 700;
 }
 
 .feature-page__list {

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import RetirementAccumulationChart from "@/components/RetirementAccumulationChart";
+import BackButton from "@/components/common/BackButton";
 import { siteConfig } from "@/config/siteConfig";
 import { formatIndianCurrency } from "@/utils/sipCalculator";
 import {
@@ -68,9 +69,7 @@ export default function RetirementPlannerPage() {
             Estimate the corpus required at retirement and the monthly SIP
             needed to reach your goal, based on inflation and risk profile.
           </p>
-          <Link href="/calculator" className="calculator-page__back">
-            ← All Calculators
-          </Link>
+          <BackButton href="/calculator">← All Calculators</BackButton>
         </div>
 
         <div className="sip-calculator sip-calculator--stacked">

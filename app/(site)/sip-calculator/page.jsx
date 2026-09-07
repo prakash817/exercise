@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import SipGrowthChart from "@/components/SipGrowthChart";
+import BackButton from "@/components/common/BackButton";
 import { siteConfig } from "@/config/siteConfig";
 import {
   SIP_YEAR_OPTIONS,
@@ -46,9 +47,7 @@ export default function SipCalculatorPage() {
             Estimate how your monthly investments can grow over time with the
             power of compounding.
           </p>
-          <Link href="/calculator" className="calculator-page__back">
-            ← All Calculators
-          </Link>
+          <BackButton href="/calculator">← All Calculators</BackButton>
         </div>
         <div className="sip-calculator sip-calculator--stacked">
           <section className="sip-calculator__panel sip-calculator__numbers">

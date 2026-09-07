@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { calculatorCards } from "@/data/calculators";
+import BackButton from "@/components/common/BackButton";
 
 export default function CalculatorPage() {
   useEffect(() => {
@@ -19,9 +20,7 @@ export default function CalculatorPage() {
             Choose a calculator below to estimate SIP growth, plan retirement
             corpus, and make informed financial decisions.
           </p>
-          <Link href="/" className="calculator-page__back">
-            ← Back to Home
-          </Link>
+          <BackButton />
         </div>
 
         <div className="calculator-hub">

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import PlanModal from "../PlanModal";
-import { PlanCardContainer } from "../PlanCardContainer";
+import PlanModal from "../common/plan/PlanModal";
+import { PlanCardContainer } from "../common/plan/PlanCardContainer";
 import { usePlans } from "@/hooks/usePlans";
 
 const PlansSectionHead = ({ category }) => {

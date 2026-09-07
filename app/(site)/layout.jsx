@@ -1,4 +1,4 @@
-import SiteChrome from "@/components/SiteChrome";
+import SiteChrome from "@/components/common/layout/SiteChrome";
 import "@/index.css";
 import "@/App.css";
 

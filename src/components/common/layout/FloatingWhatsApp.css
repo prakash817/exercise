@@ -1,0 +1,21 @@
+.float-wa {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  background: #1fa66e;
+  color: white;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 25px rgba(15, 104, 69, 0.35);
+  z-index: 60;
+}
+
+@media (max-width: 600px) {
+  .float-wa {
+    bottom: 74px;
+    right: 15px;
+  }
+}

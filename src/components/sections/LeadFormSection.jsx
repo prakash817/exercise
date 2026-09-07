@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import { buildWhatsAppEnquiryMessage, openWhatsApp } from "../../utils/links";
 
-import { EnquireForm } from "../EnquireyForm";
-import { EnquiryFormTextInfo } from "../EnquiryFormTextInfo";
+import { EnquireForm } from "../common/form/EnquireyForm";
+import { EnquiryFormTextInfo } from "../common/form/EnquiryFormTextInfo";
 
 export default function LeadFormSection() {
   const [formResult, setFormResult] = useState("");

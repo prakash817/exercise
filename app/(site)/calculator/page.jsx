@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { calculatorCards } from "@/data/calculators";
-import BackButton from "@/components/common/BackButton";
+import BackButton from "@/components/common/button/BackButton";
 
 export default function CalculatorPage() {
   useEffect(() => {

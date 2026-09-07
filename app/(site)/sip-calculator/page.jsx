@@ -2,8 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import SipGrowthChart from "@/components/SipGrowthChart";
-import BackButton from "@/components/common/BackButton";
+import SipGrowthChart from "@/components/common/chart/SipGrowthChart";
+import BackButton from "@/components/common/button/BackButton";
 import { siteConfig } from "@/config/siteConfig";
 import {
   SIP_YEAR_OPTIONS,

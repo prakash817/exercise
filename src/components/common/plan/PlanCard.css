@@ -1,0 +1,125 @@
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(5, 45, 72, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.plan-card__badge-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px 0;
+  background: linear-gradient(180deg, #fff9e8 0%, #fff 100%);
+}
+
+.plan-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px 5px 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffe08a, #f3c63f);
+  color: #4a3200;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(243, 198, 63, 0.35);
+}
+
+.plan-card__badge-icon {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(8, 123, 178, 0.25);
+  box-shadow: 0 16px 34px rgba(8, 123, 178, 0.14);
+}
+
+.plan-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  background: #f3f8fb;
+  cursor: pointer;
+}
+
+.plan-card__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.plan-card:hover .plan-card__media img {
+  transform: none;
+}
+
+.plan-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+  padding: 18px 18px 20px;
+}
+
+.plan-card__body h3 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.plan-card__body p {
+  margin: 0;
+  flex: 1;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.plan-card__cta {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.plan-card__cta:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .plans-grid,
+  .plans-grid--featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .plans-grid,
+  .plans-grid--featured {
+    grid-template-columns: 1fr;
+  }
+}

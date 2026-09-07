@@ -1,0 +1,30 @@
+.sip-chart__note {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.sip-chart-library {
+  width: 100%;
+  min-height: 320px;
+}
+
+.sip-chart-tooltip {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(5, 45, 72, 0.12);
+}
+
+.sip-chart-tooltip strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--navy);
+}
+
+.sip-chart-tooltip p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 13px;
+}

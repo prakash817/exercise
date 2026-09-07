@@ -1,0 +1,9 @@
+.plans-grid--featured {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.plans-section__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}

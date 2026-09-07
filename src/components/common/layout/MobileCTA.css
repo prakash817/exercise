@@ -1,0 +1,23 @@
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid var(--line);
+    z-index: 55;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .mobile-cta .btn {
+    flex: 1;
+    font-size: 12px;
+  }
+}

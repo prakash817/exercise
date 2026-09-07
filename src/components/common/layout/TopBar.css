@@ -1,0 +1,44 @@
+.topbar {
+  background: var(--navy);
+  color: white;
+  font-size: 14px;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 9px 0;
+  align-items: center;
+}
+
+.topbar-inner {
+  flex-wrap: wrap;
+}
+
+.topbar-contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.topbar a,
+.topbar-link {
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .topbar .container {
+    font-size: 11px;
+  }
+
+  .topbar .email {
+    display: none;
+  }
+
+  .topbar-contact {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import BackButton from "@/components/common/BackButton";
+import BackButton from "@/components/common/button/BackButton";
 import { useFeatureLandings } from "@/hooks/useFeatureLandings";
 
 function formatFeatureName(name) {

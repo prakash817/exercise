@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getServicesContent } from "../../config/siteConfig";
-import LanguageToggle, { LANGUAGES } from "../LanguageToggle";
+import LanguageToggle, { LANGUAGES } from "../common/toggle/LanguageToggle";
 
 function ServiceList({ title, items, variant }) {
   return (

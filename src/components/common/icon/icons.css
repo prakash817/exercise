@@ -1,0 +1,6 @@
+.whatsapp-icon,
+.call-icon,
+.facebook-icon,
+.instagram-icon {
+  flex-shrink: 0;
+}

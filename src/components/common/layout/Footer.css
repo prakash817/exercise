@@ -1,0 +1,59 @@
+footer {
+  background: #071f35;
+  color: #d9e5ed;
+  padding: 45px 0 85px;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.foot h3 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.foot p {
+  max-width: 600px;
+  font-size: 13px;
+}
+
+.disclaimer {
+  font-size: 11px;
+  color: #9eb1bf;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 25px;
+  padding-top: 20px;
+}
+
+.brandmark-footer {
+  width: 100px;
+  height: 100px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 50px;
+  box-shadow: 0 8px 20px rgba(8, 123, 178, 0.2);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 6px;
+}
+
+.footer-contact__line {
+  display: inline-flex;
+  justify-content: start;
+}
+
+@media (max-width: 600px) {
+  .foot {
+    flex-direction: column;
+  }
+}

@@ -2,8 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import RetirementAccumulationChart from "@/components/RetirementAccumulationChart";
-import BackButton from "@/components/common/BackButton";
+import RetirementAccumulationChart from "@/components/common/chart/RetirementAccumulationChart";
+import BackButton from "@/components/common/button/BackButton";
 import { siteConfig } from "@/config/siteConfig";
 import { formatIndianCurrency } from "@/utils/sipCalculator";
 import {

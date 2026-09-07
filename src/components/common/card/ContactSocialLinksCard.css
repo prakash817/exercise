@@ -1,0 +1,69 @@
+.contact-card-title {
+  position: relative;
+  display: inline-block;
+  animation: titleReveal 0.7s ease-out 0.15s both;
+}
+
+.contact-card-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  transform: scaleX(0);
+  animation: underlineReveal 0.8s ease-out 0.6s forwards;
+}
+
+.contact-card-description {
+  color: #607083;
+  animation: fadeUp 0.6s ease-out 0.25s both;
+}
+
+.contact-card-note {
+  font-size: 12px;
+  color: #607083;
+  margin-top: 20px;
+  animation: fadeUp 0.6s ease-out 0.7s both;
+}
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineReveal {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-card-title,
+  .contact-card-description,
+  .contact-card-note {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

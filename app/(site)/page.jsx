@@ -10,7 +10,7 @@ import ContactSection from "@/components/sections/ContactSection";
 import FAQSection from "@/components/sections/FAQSection";
 import HeroSection from "@/components/sections/HeroSection";
 import LeadFormSection from "@/components/sections/LeadFormSection";
-import Lightbox from "@/components/Lightbox";
+import Lightbox from "@/components/common/lightbox/Lightbox";
 
 export default function HomePage() {
   useScrollToHash();

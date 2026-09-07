@@ -1,6 +1,6 @@
 import { siteConfig } from "../../config/siteConfig";
-import { ContactSocialLinksCard } from "../ContactSocialLinksCard";
-import { ContactDetails } from "../ContactDetails";
+import { ContactSocialLinksCard } from "../common/card/ContactSocialLinksCard";
+import { ContactDetails } from "../common/card/ContactDetails";
 
 export default function ContactSection() {
   return (

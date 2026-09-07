@@ -1,5 +1,5 @@
 import { placementCards } from '../../data/content'
-import CardGrid from '../../components/CardGrid'
+import CardGrid from '../../components/common/card/CardGrid'
 
 export default function JobPlacementSection() {
   return (

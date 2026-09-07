@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { getVisionContent } from '../../config/siteConfig'
-import LanguageToggle, { LANGUAGES } from '../LanguageToggle'
+import LanguageToggle, { LANGUAGES } from '../common/toggle/LanguageToggle'
 
 function VisionContentPanel({ language, isVisible }) {
   const content = getVisionContent(language)

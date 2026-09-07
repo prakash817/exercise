@@ -1,0 +1,38 @@
+.profile-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.profile-card img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 20px;
+  object-position: center 35%;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 8px 4px;
+}
+
+.profile-info strong {
+  font-size: 19px;
+}
+
+.profile-info small {
+  display: block;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .profile-card img {
+    height: 330px;
+  }
+}

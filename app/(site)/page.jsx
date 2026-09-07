@@ -4,7 +4,7 @@ import { useState } from "react";
 import useScrollToHash from "@/hooks/useScrollToHash";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesSection from "@/components/sections/ServicesSection";
-import TestimonialSection from "@/components/sections/TestimonialSection";
+import TestimonialSection from "@/components/testimonials";
 import PlansSection from "@/components/sections/PlansSection";
 import ContactSection from "@/components/sections/ContactSection";
 import FAQSection from "@/components/sections/FAQSection";

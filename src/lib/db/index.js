@@ -10,3 +10,8 @@ export {
   replacePlan,
   updatePlan,
 } from "@/lib/db/plans";
+export {
+  createTestimonial,
+  listTestimonials,
+  testimonialsDb,
+} from "@/lib/db/testimonials";

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import PlanCard from "./PlanCard";
 
 export const PlanCardContainer = ({ featuredPlans, setSelectedPlan }) => {
@@ -11,7 +11,7 @@ export const PlanCardContainer = ({ featuredPlans, setSelectedPlan }) => {
       </div>
 
       <div className="plans-section__footer">
-        <Link to="/plans" className="btn btn-primary">
+        <Link href="/plans" className="btn btn-primary">
           Show More Plans
         </Link>
       </div>

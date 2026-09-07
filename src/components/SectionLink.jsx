@@ -1,4 +1,7 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import CallIcon from "./CallIcon";
 import { telLink } from "../utils/links";
 
@@ -10,8 +13,8 @@ export default function SectionLink({
   onNavigate,
   call,
 }) {
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
 
   if (call) {
     return (
@@ -28,7 +31,7 @@ export default function SectionLink({
 
   if (path) {
     return (
-      <Link to={path} className={className} onClick={() => onNavigate?.()}>
+      <Link href={path} className={className} onClick={() => onNavigate?.()}>
         {children}
       </Link>
     );
@@ -38,8 +41,8 @@ export default function SectionLink({
     event.preventDefault();
     onNavigate?.();
 
-    if (location.pathname !== "/") {
-      navigate({ pathname: "/", hash: `#${section}` });
+    if (pathname !== "/") {
+      router.push(`/#${section}`);
       return;
     }
 
@@ -48,7 +51,7 @@ export default function SectionLink({
   };
 
   return (
-    <Link to={`/#${section}`} className={className} onClick={handleClick}>
+    <Link href={`/#${section}`} className={className} onClick={handleClick}>
       {children}
     </Link>
   );

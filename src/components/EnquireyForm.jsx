@@ -1,8 +1,11 @@
-import { featurePlans } from "../config/plans";
+"use client";
+
 import { genderOptions } from "../data/content";
 import WhatsAppIcon from "./WhatsAppIcon";
+import { usePlans } from "@/hooks/usePlans";
 
 export const EnquireForm = ({ formResult, handleSubmit }) => {
+  const { plans } = usePlans();
   return (
     <form onSubmit={handleSubmit}>
       <input name="name" required placeholder="Full Name *" />
@@ -22,8 +25,12 @@ export const EnquireForm = ({ formResult, handleSubmit }) => {
       {/* <input name="age" type="number" min="1" max="100" placeholder="Age" /> */}
       {/* <input name="qualification" placeholder="Qualification" /> */}
 
-      <select name="plan_name" defaultValue={featurePlans[0].plan_name}>
-        {featurePlans.map((plan) => (
+      <select
+        name="plan_name"
+        defaultValue={plans[0]?.plan_name}
+        key={plans[0]?.id ?? "plans-loading"}
+      >
+        {plans.map((plan) => (
           <option key={plan.id}>{plan.plan_name}</option>
         ))}
       </select>

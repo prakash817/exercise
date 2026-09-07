@@ -17,7 +17,7 @@ export const IntroImageCard = () => {
             loading="eager"
           /> */}
       <img
-        src={myPhoto}
+        src={typeof myPhoto === "string" ? myPhoto : myPhoto.src}
         alt={`${siteConfig.name} LIC Insurance Advisor`}
         loading="eager"
       />

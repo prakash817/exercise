@@ -1,0 +1,15 @@
+export const seedFeatureLandings = [
+  { policyId: "term-insurance-v3", userId: "CE8841" },
+  { policyId: "term-insurance", userId: "CE6622" },
+  { policyId: "term-insurance-v7", userId: "CE6622" },
+  { policyId: "life-insurance-v4", userId: "CE6622" },
+  { policyId: "life-insurance-v5", userId: "CE8841" },
+  { policyId: "life-insurance-v7", userId: "CE8841" },
+  { policyId: "retirement", userId: "CE6622" },
+  { policyId: "retirement-v2", userId: "CE6622" },
+  { policyId: "retirement-v3", userId: "CE8841" },
+  { policyId: "retirement-v4", userId: "CE8841" },
+  { policyId: "retirement-v7", userId: "CE8841" },
+  { policyId: "sip", userId: "CE8841" },
+  { policyId: "sip-v4", userId: "CE8841" },
+];

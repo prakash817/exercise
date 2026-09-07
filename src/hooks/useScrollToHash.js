@@ -1,12 +1,15 @@
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+"use client";
+
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function useScrollToHash() {
-  const { hash } = useLocation()
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (!hash) return
-    const id = hash.replace('#', '')
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-  }, [hash])
+    const hash = window.location.hash;
+    if (!hash) return;
+    const id = hash.replace("#", "");
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  }, [pathname]);
 }

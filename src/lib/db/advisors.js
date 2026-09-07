@@ -1,8 +1,22 @@
 import { seedAdvisors } from "@/lib/db/seed";
+
 const globalForDb = globalThis;
-export const advisorsDb = globalForDb.advisorsDb ?? structuredClone(seedAdvisors);
+
+function initAdvisorsDb() {
+  const db = globalForDb.advisorsDb ?? structuredClone(seedAdvisors);
+
+  for (const advisor of seedAdvisors) {
+    if (!db.some((item) => item.id === advisor.id)) {
+      db.push(structuredClone(advisor));
+    }
+  }
+
+  return db;
+}
+
+export const advisorsDb = initAdvisorsDb();
 if (process.env.NODE_ENV !== "production") {
-    globalForDb.advisorsDb = advisorsDb;
+  globalForDb.advisorsDb = advisorsDb;
 }
 export function getAllAdvisors() {
     return advisorsDb;

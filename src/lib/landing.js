@@ -18,19 +18,25 @@ export function getAllAdvisorIds() {
   return getAllAdvisors().map((advisor) => advisor.id);
 }
 
-export function getFeatureLandings() {
-  return seedFeatureLandings
-    .map(({ policyId, userId }) => {
+export function getFeatureLandings(userId) {
+  const advisorId = userId?.trim();
+  const landings = advisorId
+    ? seedFeatureLandings.filter((item) => item.userId === advisorId)
+    : seedFeatureLandings;
+
+  return landings
+    .map(({ policyId, userId: landingUserId }) => {
       const policy = getPolicyById(policyId);
-      const advisor = getAdvisorById(userId);
-      if (!policy || !advisor) return null;
+      if (!policy) return null;
+
+      const advisor = getAdvisorById(landingUserId);
       return {
         policyId,
-        userId,
-        href: `/policy/${policyId}/${userId}`,
+        userId: landingUserId,
+        href: `/policy/${policyId}/${landingUserId}`,
         name: policy.name,
         versionLabel: policyId,
-        advisorName: advisor.name,
+        advisorName: advisor?.name ?? "",
       };
     })
     .filter(Boolean);

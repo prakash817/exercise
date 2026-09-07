@@ -1,20 +1,35 @@
 import { seedPolicies } from "@/lib/db/seed";
 import { withPolicyStyles } from "@/lib/policy-theme";
+
 const globalForDb = globalThis;
+
 function initPoliciesDb() {
-    const seed = structuredClone(seedPolicies).map(withPolicyStyles);
-    const existing = globalForDb.policiesDb;
-    if (!existing) {
-        return seed;
-    }
-    return existing.map((policy) => {
-        const seedPolicy = seed.find((item) => item.id === policy.id);
-        return withPolicyStyles({
-            ...policy,
-            styles: policy.styles ?? seedPolicy?.styles,
-        });
+  const seed = structuredClone(seedPolicies).map(withPolicyStyles);
+  const existing = globalForDb.policiesDb;
+
+  if (!existing) {
+    return seed;
+  }
+
+  const seedIds = new Set(seed.map((policy) => policy.id));
+  const existingIds = new Set(existing.map((policy) => policy.id));
+  const idsMatch =
+    seedIds.size === existingIds.size &&
+    [...seedIds].every((id) => existingIds.has(id));
+
+  if (!idsMatch) {
+    return seed;
+  }
+
+  return existing.map((policy) => {
+    const seedPolicy = seed.find((item) => item.id === policy.id);
+    return withPolicyStyles({
+      ...policy,
+      styles: policy.styles ?? seedPolicy?.styles,
     });
+  });
 }
+
 export const policiesDb = initPoliciesDb();
 if (process.env.NODE_ENV !== "production") {
     globalForDb.policiesDb = policiesDb;

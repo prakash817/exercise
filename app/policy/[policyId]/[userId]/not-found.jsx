@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteConfig } from "@/config/siteConfig";
 
 export default function PolicyNotFound() {
   return (
@@ -14,7 +15,7 @@ export default function PolicyNotFound() {
       <p className="mt-2 text-sm text-slate-500">
         Example:{" "}
         <code className="rounded bg-white/10 px-2 py-1">
-          /policy/term-insurance-v3/CE6622
+          /policy/term-insurance-plan3/{siteConfig.userId}
         </code>
       </p>
       <Link

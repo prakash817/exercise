@@ -1,5 +1,18 @@
 export const seedAdvisors = [
     {
+        id: "A0001",
+        name: "Suraj Gupta",
+        title: "Senior Life Insurance Advisor",
+        company: "Life Insurance Corporation of India (LIC)",
+        phone: "8103747279",
+        email: "suraj.gupta817@yahoo.in",
+        licenseNumber: "IRDAI/CA/1234567890",
+        avatarInitials: "SG",
+        experienceYears: 13,
+        clientsServed: 2400,
+        greeting: "I'll personally help you find the right cover for your family.",
+    },
+    {
         id: "CE6622",
         name: "Suraj Gupta",
         title: "Senior Life Insurance Advisor",

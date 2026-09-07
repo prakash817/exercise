@@ -1,68 +1,3 @@
-export const featurePage = [
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/term-insurance-v3/CE8841",
-    featurePageName: "term-insurance-v3",
-  },
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/term-insurance/CE6622",
-    featurePageName: "term-insurance",
-  },
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/term-insurance-v7/CE6622",
-    featurePageName: "term-insurance-v7",
-  },
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/life-insurance-v4/CE6622",
-    featurePageName: "life-insurance-v4",
-  },
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/life-insurance-v5/CE8841",
-    featurePageName: "life-insurance-v5",
-  },
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/life-insurance-v7/CE8841",
-    featurePageName: "life-insurance-v7",
-  },
-  {
-    featurePageUrl: "https://featurepage.netlify.app/policy/retirement/CE6622",
-    featurePageName: "retirement",
-  },
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/retirement-v2/CE6622",
-    featurePageName: "retirement-v2",
-  },
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/retirement-v3/CE8841",
-    featurePageName: "retirement-v3",
-  },
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/retirement-v4/CE8841",
-    featurePageName: "retirement-v4",
-  },
-  {
-    featurePageUrl:
-      "https://featurepage.netlify.app/policy/retirement-v7/CE8841",
-    featurePageName: "retirement-v7",
-  },
-  {
-    featurePageUrl: "https://featurepage.netlify.app/policy/sip/CE8841",
-    featurePageName: "sip",
-  },
-  {
-    featurePageUrl: "https://featurepage.netlify.app/policy/sip-v4/CE8841",
-    featurePageName: "sip-v4",
-  },
-];
-
 export const planTypes = {
   INCOME_PROTECTION: "income-protection",
   MARRIAGE_PLANNING: "marriage-planning",
@@ -72,6 +7,7 @@ export const planTypes = {
 };
 
 export const siteConfig = {
+  userId: "A0001",
   name: "Suraj Kumar Gupta",
   fullName: "Suraj Kumar Gupta",
   fullNameHi: "सूरज कुमार गुप्ता",

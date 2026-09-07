@@ -1,5 +1,7 @@
-import { getFeatureLandings } from "@/lib/landing";
+"use client";
+
 import BackButton from "@/components/common/BackButton";
+import { useFeatureLandings } from "@/hooks/useFeatureLandings";
 
 function formatFeatureName(name) {
   return name
@@ -9,7 +11,7 @@ function formatFeatureName(name) {
 }
 
 export default function FeaturePage() {
-  const listings = getFeatureLandings();
+  const { listings } = useFeatureLandings();
 
   return (
     <main className="calculator-page feature-page">

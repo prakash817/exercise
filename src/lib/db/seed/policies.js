@@ -2,7 +2,7 @@ import { policy } from "@/lib/db/seed/helpers";
 import { POLICY_STYLES } from "@/lib/db/seed/policy-styles";
 export const seedPolicies = [
     policy({
-        id: "term-insurance-v3",
+        id: "term-insurance-plan3",
         styles: POLICY_STYLES.warmAmber,
         name: "Term Life Insurance",
         tagline: "A Promise Your Family Can Cash",
@@ -290,7 +290,7 @@ export const seedPolicies = [
         stickyCtaText: "Get ₹1 Cr Term Plan @ ₹500/mo",
     }),
     policy({
-        id: "term-insurance-v7",
+        id: "term-insurance-plan7",
         styles: POLICY_STYLES.emeraldGuard,
         name: "Term Insurance V7",
         tagline: "Built for families. Trusted by advisors.",
@@ -423,7 +423,7 @@ export const seedPolicies = [
         stickyCtaText: "Get My Term Cover Now",
     }),
     policy({
-        id: "life-insurance-v4",
+        id: "life-insurance-plan4",
         styles: POLICY_STYLES.roseFamily,
         name: "Life Insurance V4",
         tagline: "Life Insurance — Protection + Returns",
@@ -547,7 +547,7 @@ export const seedPolicies = [
         stickyCtaText: "Smart Plan शुरू करें",
     }),
     policy({
-        id: "life-insurance-v5",
+        id: "life-insurance-plan5",
         styles: POLICY_STYLES.violetPremium,
         name: "Life Insurance V5",
         tagline: "Life Insurance — Protection + Returns",
@@ -671,7 +671,7 @@ export const seedPolicies = [
         stickyCtaText: "Start Your Smart Plan",
     }),
     policy({
-        id: "life-insurance-v7",
+        id: "life-insurance-plan7",
         styles: POLICY_STYLES.oceanTeal,
         name: "Life Insurance V7",
         tagline: "Built for families. Trusted by advisors.",
@@ -945,7 +945,7 @@ export const seedPolicies = [
         stickyCtaText: "Get Free Retirement Plan",
     }),
     policy({
-        id: "retirement-v2",
+        id: "retirement-plan2",
         styles: POLICY_STYLES.deepIndigo,
         name: "Retirement Planning V2",
         tagline: "SEBI Registered • 8000+ Retirements Planned",
@@ -1088,7 +1088,7 @@ export const seedPolicies = [
         stickyCtaText: "Plan My Retirement",
     }),
     policy({
-        id: "retirement-v3",
+        id: "retirement-plan3",
         styles: POLICY_STYLES.sageRetire,
         name: "Retirement Planning V3",
         tagline: "SEBI Registered • 12,000+ Plans Created",
@@ -1234,7 +1234,7 @@ export const seedPolicies = [
         stickyCtaText: "Start Retirement Countdown",
     }),
     policy({
-        id: "retirement-v4",
+        id: "retirement-plan4",
         styles: POLICY_STYLES.burgundyWine,
         name: "Retirement Planning V4",
         tagline: "Free Retirement Planning Consultation",
@@ -1356,7 +1356,7 @@ export const seedPolicies = [
         stickyCtaText: "Retirement Plan शुरू करें",
     }),
     policy({
-        id: "retirement-v7",
+        id: "retirement-plan7",
         styles: POLICY_STYLES.champagneGold,
         name: "Retirement Planning V7",
         tagline: "Built for families. Trusted by advisors.",
@@ -1619,7 +1619,7 @@ export const seedPolicies = [
         stickyCtaText: "Start My SIP — Free Expert Advice",
     }),
     policy({
-        id: "sip-v4",
+        id: "sip-plan4",
         styles: POLICY_STYLES.electricLime,
         name: "SIP Investment V4",
         tagline: "Free SIP Expert Consultation • 25,000+ Investors",

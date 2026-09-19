@@ -128,9 +128,9 @@
     grid-template-columns: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding-left: 20px;
-    padding: 4px 20px 14px;
-    margin: 0 -20px;
+    scroll-padding-left: 0;
+    padding: 4px 0 14px;
+    margin: 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }

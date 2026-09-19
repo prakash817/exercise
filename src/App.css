@@ -20,7 +20,7 @@
 body {
   margin: 0;
   color: var(--ink);
-  font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
+  font-family: "Plus Jakarta Sans", "Noto Sans Devanagari", sans-serif;
   background: #fbfdfe;
   line-height: 1.65;
 }
@@ -141,7 +141,6 @@ a {
   font-weight: 700;
 }
 
-
 section {
   padding: 76px 0;
 }
@@ -244,11 +243,9 @@ section {
 .advisor-intro__planning-list li {
   gap: 14px;
   margin-bottom: 10px;
-  
 }
 
 .planning-link {
-  border-bottom: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -259,7 +256,6 @@ section {
   background: rgba(255, 255, 255, 0.92);
   text-decoration: none;
   color: var(--ink);
-  /* border-bottom: 1px solid red; */
   transition:
     transform 0.28s ease,
     box-shadow 0.28s ease,
@@ -1149,7 +1145,11 @@ section {
   }
 
   section {
-    padding: 55px 0;
+    padding: 40px 0;
+  }
+
+  .section-head {
+    margin-bottom: 18px;
   }
 
   .lead {

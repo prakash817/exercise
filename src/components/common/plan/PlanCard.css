@@ -124,6 +124,25 @@
 @media (max-width: 600px) {
   .plans-grid,
   .plans-grid--featured {
-    grid-template-columns: 1fr;
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    padding: 4px 20px 14px;
+    margin: 0 -20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .plans-grid::-webkit-scrollbar,
+  .plans-grid--featured::-webkit-scrollbar {
+    display: none;
+  }
+
+  .plans-grid .plan-card,
+  .plans-grid--featured .plan-card {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
   }
 }

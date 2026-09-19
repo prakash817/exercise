@@ -4,6 +4,10 @@
   gap: 22px;
 }
 
+.plans-grid--featured {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .plan-card {
   display: flex;
   flex-direction: column;

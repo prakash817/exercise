@@ -1058,6 +1058,7 @@ section {
 
 .faq summary {
   font-weight: 800;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -1071,13 +1072,6 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-}
-
-.contact-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 26px;
 }
 
 @media (max-width: 900px) {
@@ -1164,13 +1158,5 @@ section {
 
   .lead h2 {
     font-size: 29px;
-  }
-
-  form {
-    grid-template-columns: 1fr;
-  }
-
-  .full {
-    grid-column: auto;
   }
 }

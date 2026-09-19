@@ -55,6 +55,16 @@ select:focus {
   grid-column: 1 / -1;
 }
 
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .full {
+    grid-column: auto;
+  }
+}
+
 .datetime-field,
 .datetime-field input[type="datetime-local"] {
   cursor: pointer;

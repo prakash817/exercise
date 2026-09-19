@@ -990,38 +990,6 @@ section {
   color: var(--muted);
 }
 
-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-input,
-select,
-select {
-  cursor: pointer;
-}
-
-textarea {
-  width: 100%;
-  padding: 13px 14px;
-  border: 1px solid #cddce5;
-  border-radius: 12px;
-  background: #fff;
-  font: inherit;
-  color: var(--ink);
-}
-
-select,
-textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-.full {
-  grid-column: 1 / -1;
-}
-
 .form-note {
   font-size: 11px;
   color: var(--muted);
